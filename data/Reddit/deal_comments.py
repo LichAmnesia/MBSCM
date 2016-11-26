@@ -2,7 +2,7 @@
 # @Author: LichAmnesia
 # @Date:   2016-11-26 13:20:29
 # @Last Modified by:   LichAmnesia
-# @Last Modified time: 2016-11-26 13:47:08
+# @Last Modified time: 2016-11-26 13:51:24
 # This is to deal with the comments and generate every day's comments file.
 
 import datetime
@@ -21,7 +21,7 @@ with open('comments', 'r') as fileobject:
         time_stamp = js['created_utc']
         date_array = datetime.datetime.utcfromtimestamp(time_stamp)
         day = date_array.strftime("%Y-%m-%d")
-        filename = 'comments_' + day
+        filename = 'comments_' + day + '.csv'
         if filename != cur_filename:
             if file:
                 file.close()
