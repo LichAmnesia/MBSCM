@@ -1,5 +1,13 @@
+# @Author: Lich_Amnesia
+# @Date:   2016-11-30T00:17:05-07:00
+# @Email:  Shen.Huang@Colorado.Edu
+# @Last modified by:   Lich_Amnesia
+# @Last modified time: 2016-11-30T00:29:50-07:00
+
+
+
 import os
-import network
+from network import Model
 # We'll render HTML templates and access data sent by POST
 # using the request object from flask. Redirect and url_for
 # will be used to redirect the user once the upload is done
@@ -42,7 +50,8 @@ def upload():
         # the upload folder we setup
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         print(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        # network.solve()
+        model = Model(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        
         # Redirect the user to the uploaded_file route, which
         # will basicaly show on the browser the uploaded file
         return redirect(url_for('uploaded_file',

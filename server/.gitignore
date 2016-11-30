@@ -1,1 +1,4 @@
+*.pyc
 uploads/
+
+network/__pycache__
