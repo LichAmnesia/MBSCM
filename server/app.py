@@ -41,6 +41,7 @@ def upload():
         # Move the file form the temporal folder to
         # the upload folder we setup
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        print(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         # network.solve()
         # Redirect the user to the uploaded_file route, which
         # will basicaly show on the browser the uploaded file
