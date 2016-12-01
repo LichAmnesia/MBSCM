@@ -2,7 +2,7 @@
 # @Author: LichAmnesia
 # @Date:   2016-11-26 13:20:29
 # @Last Modified by:   Lich_Amnesia
-# @Last Modified time: 2016-11-30 20:59:35
+# @Last Modified time: 2016-11-30 20:32:06
 # This is to deal with the comments and generate every day's comments file.
 
 import datetime
@@ -49,7 +49,7 @@ def countLargestReddit():
             else:
                 dic_subreddit[js['subreddit']] += 1
     ans = sorted(dic_subreddit.items(), key=lambda x: x[1], reverse=True)
-    print(ans[:10])
+    print(ans[:50])
 
 
 # 创建comment，根据subreddit进行筛选
@@ -76,7 +76,7 @@ def generateComments_subreddit_name(subredditlist=["politics", "GlobalOffensiveT
 
 def main():
     # countLargestReddit()
-    generateComments_subreddit_name()
+    generateComments_subreddit_name(['Music', 'hillaryclinton'])
 
 if __name__ == '__main__':
     main()

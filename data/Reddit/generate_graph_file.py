@@ -2,7 +2,7 @@
 # @Author: LichAmnesia
 # @Date:   2016-11-26 13:20:29
 # @Last Modified by:   Lich_Amnesia
-# @Last Modified time: 2016-11-30 19:50:44
+# @Last Modified time: 2016-11-30 20:42:56
 # This is to deal with the comments and generate every day's comments file.
 
 import datetime
@@ -162,7 +162,7 @@ def read_edge_subreddit_multi(filename='comments_2016-09-01.csv'):
         if len(author_map[i]) > 1:
             for j in range(len(author_map[i]) - 1):
                 for k in range(j + 1, len(author_map[i])):
-                    if random.randint(1, 1000) >= 10:
+                    if random.randint(1, 1000) >= 5:
                         continue
                     if author_map[i][j] != author_map[i][k] and (author_map[i][j], author_map[i][k]) not in edge_set:
                         has_set.add(author_map[i][j])
@@ -185,7 +185,7 @@ def read_edge_subreddit_multi(filename='comments_2016-09-01.csv'):
 # labels_data, moderators_map, subreddit_map = read_label_write_label_file()
 def main():
     # read_edge_date()
-    read_edge_subreddit_multi(filename='politics_GlobalOffensiveTrade_1.csv')
+    read_edge_subreddit_multi(filename='comments_subreddit_Music_hillaryclinton_3.csv')
 
 if __name__ == '__main__':
     main()
