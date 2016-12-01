@@ -2,7 +2,7 @@
 # @Author: LichAmnesia
 # @Date:   2016-11-26 13:20:29
 # @Last Modified by:   Lich Amnesia
-# @Last Modified time: 2016-11-30 17:00:02
+# @Last Modified time: 2016-11-30 17:37:12
 # This is to deal with the comments and generate every day's comments file.
 
 import datetime
@@ -122,7 +122,7 @@ def read_edge_subreddit(filename='comments_2016-09-01.csv'):
 # labels_data, moderators_map, subreddit_map = read_label_write_label_file()
 def main():
     # read_edge_date()
-    read_edge_subreddit(filename='comments_subreddit_politics_GlobalOffensive_Trade_3.csv')
+    read_edge_subreddit(filename='comments_subreddit_politics_GlobalOffensive_Trade_1.csv')
 
 if __name__ == '__main__':
     main()
