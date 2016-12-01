@@ -2,7 +2,7 @@
 # @Author: Lich_Amnesia
 # @Date:   2016-11-30 21:13:48
 # @Last Modified by:   Lich_Amnesia
-# @Last Modified time: 2016-11-30 21:29:56
+# @Last Modified time: 2016-11-30 21:43:19
 # @Email: shen.huang@colorado.edu
 
 
@@ -17,3 +17,4 @@ with open('subreddit.data', 'r') as f:
 		else:
 			print(a[0]+'\\n'+a[1:], end=", ")
 		# print(b, end=", ")
+		
