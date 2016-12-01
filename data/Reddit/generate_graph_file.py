@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 # @Author: LichAmnesia
 # @Date:   2016-11-26 13:20:29
-# @Last Modified by:   Lich_Amnesia
-# @Last Modified time: 2016-11-30 14:32:50
+# @Last Modified by:   Lich Amnesia
+# @Last Modified time: 2016-11-30 17:00:02
 # This is to deal with the comments and generate every day's comments file.
 
 import datetime
@@ -108,10 +108,12 @@ def read_edge_subreddit(filename='comments_2016-09-01.csv'):
     edge_file.close()
     print(has_set, len(has_set))
 
+    has_wirte = set([])
     for line_num in range(len(edge_data)):
         line = edge_data.loc[line_num]
         node = link_id_map[line['link_id']]
-        if node in has_set:
+        if node in has_set and node not in has_wirte:
+            has_wirte.add(node)
             label_file.write(str(node) + ' ' + str(node_label_map[line['subreddit']]) + '\n')
     label_file.close()
 
@@ -120,7 +122,7 @@ def read_edge_subreddit(filename='comments_2016-09-01.csv'):
 # labels_data, moderators_map, subreddit_map = read_label_write_label_file()
 def main():
     # read_edge_date()
-    read_edge_subreddit(filename='comments_subreddit_politics_GlobalOffensiveTrade.csv')
+    read_edge_subreddit(filename='comments_subreddit_politics_GlobalOffensive_Trade_3.csv')
 
 if __name__ == '__main__':
     main()
