@@ -1,6 +1,7 @@
 # @Author: Sarah
 # @Date: 2016-12-02 11:40:09
-# @Last Modified by: Sarah
+# @Last Modified by: Shen
+# The python implmentation for Higher-order Organization of Complex Networks. Austin R. Benson, David F. Gleich, and Jure Leskovec. Science, vol. 353, no. 6295, pp. 163-166, 2016.
 
 from sklearn.metrics.cluster import normalized_mutual_info_score
 import networkx as nx
